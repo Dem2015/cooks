@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
+
+body {
+    font-family: 'Lato', sans-serif;
+    max-width: 1440px;
+    min-width: 1200px;
+    margin: auto;
+    background: radial-gradient(50% 50% at 50% 50%, #FBBC05 0%, #FF8F3F 100%);
+    background-image: url("img/bg.png");
+    background-repeat: no-repeat;
+    background-size: 100%; 
+    background-color: rgba(251, 173, 57,0.9);
+}
+
+.container {
+    margin: 50px 0 0 80px;
+    min-width: 1100px;
+    max-width: 1300px;
+    padding:0 1.6%;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .container .logo {
+    margin: 0;
+    padding: 0 0 5px;
+    width: 73.46px;
+    height: 36.8px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+header .container .shine-button {
+    height: 34px;
+    font-size: 14px;
+    line-height: 34px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 24px;
+    color: #FFFFFF;
+    transition: all .2s ease-in-out;
+    border: 2px solid #FFFFFF;
+    border-radius: 31px;
+}
+
+header .container .shine-button:hover {
+    background: #fe6637;
+    box-shadow: 0 6px 30px #FBAD39;
+    border-color: #fe6637;
+    color: #fff;
+    transition: all .2s ease-in-out;
+}
+header .container .shine-button:hover:before {
+    left: 150px;
+    transition: .5s ease-in-out;
+}
+
+header .container .menu-main {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0 5px;
+  text-align: center;
+}
+header .container .menu-main li {display: inline-block;}
+header .container .menu-main li:after {
+  content: "";
+  color: #FFFFFF;
+  display: inline-block;
+  vertical-align:top;
+}
+
+header .container .menu-main li:last-child:after {content: none;}
+header .container .menu-main a {
+    position: relative;
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    transition: color .2s;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-decoration: none;
+    padding-bottom: 12px;
+    margin: 0 18px 0 18px;
+}
+
+header .container .menu-main a, header .container .menu-main a:visited {color: #ffffff;}
+header .container .menu-main a.current, header .container .menu-main a:hover{color: #ffffff;}
+header .container .menu-main a:before,
+header .container .menu-main a:after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  top: auto;
+  right: 50%;
+  bottom: -5px;
+  left: 50%;
+  background: #ffffff;
+  transition: .8s;
+}
+
+header .container .menu-main a:hover:before, header .container .menu-main .current:before {
+    left: 0;
+}
+
+header .container .menu-main a:hover:after, header .container .menu-main .current:after {
+    right: 0;
+}
+
+.slide-container {
+    position: absolute;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.3s ease-in;
+}
+
+.slide-container.active {
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.3s ease-in;
+}
+
+.slide-container .slide-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.slide-container .slide-row:last-child {
+    margin-bottom: 0;
+}
+
+.slide-container .slide-row .slide-column {
+    min-width: 330px;
+}
+
+.slide-container .slide-row .slide-column h1 {
+    max-width: 330px;
+    font-family: 'Inter', sans-serif;
+    font-size: 64px;
+    line-height: 77px;
+    font-weight: 900;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+}
+.slide-container .slide-row .slide-column h4 {
+    max-width: 165px;
+
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+    letter-spacing: 0.015em;
+    color: #FFFFFF;
+}
+
+.slide-container .slide-row .slide-column img.plate {
+    border-radius: 50%;
+    border: solid 50px rgba(251, 197, 51, 0.5);
+    margin-top: 0;
+}
+
+.slide-container .slide-row .slide-column.slider-controls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 40px;
+}
+
+.slide-container .slide-row .slide-column.slider-controls .slide-scroll-down {
+    display: flex;
+    flex-direction: column;
+}
+
+.slide-container .slide-row .slide-column.slider-controls .slide-scroll-down p {
+    font-size: 12.6px;
+    font-weight: 800;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    writing-mode:vertical-rl;
+    color: #FCFCFC;
+    margin: 0;
+}
+
+.slide-container .slide-row .slide-column.slider-controls .slide-scroll-down .scroll-icon {
+    width: 21px;
+    height: 46px;
+    background: url("img/get_down.svg") no-repeat;
+    background-size: contain;
+    margin-top: 60px;
+}
+
+.slide-container .slide-row .slide-column .menu_panel {
+    border-radius: 160px;
+    background-color: #ffffff;
+    float: right;
+    width: 180px;
+    text-align: right;
+    left: 100px;
+}
+
+.slide-container .slide-row .slide-column .menu_panel .active img {
+    width: 148px;
+    margin: 16px;
+    filter: drop-shadow(0px 4px 25px rgba(251, 149, 60, 0.6));
+}
+
+.slide-container .slide-row .slide-column .menu_panel img {
+    display: block;
+    width: 100px;
+    border-radius: 50%;
+    margin: 40px;
+}
+
+.slide-container .slide-row .slide-column .slide-header {
+    max-width: 250px;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 800;
+    letter-spacing: 0.015em;
+    color: white;
+    text-align: center;
+    margin: 0 auto 10px;
+}
+
+.slide-container .slide-row .slide-column .slide-description {
+    max-width: 250px;
+    font-size: 16px;
+    line-height: 19px;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.slide-container .slide-row .slide-column .slide-sub-header {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.slide-container .slide-row .slide-column.slide-column-text-right .slide-sub-header,
+.slide-container .slide-row .slide-column.slide-column-text-right .slide-sub-description {
+    text-align: right;
+}
+
+.slide-container .slide-row .slide-column .slide-sub-description {
+    font-size: 24px;
+    font-weight: 800;
+    color: white;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+
+a.point {
+	cursor: pointer;	
+}
