@@ -1,16 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
 
-body {
+body.bg {
     font-family: 'Lato', sans-serif;
     max-width: 1440px;
     min-width: 1200px;
     margin: auto;
+}
+
+.bg1 {
+    background: radial-gradient(50% 50% at 50% 50%, #FBBC05 0%, #FF8F3F 100%);
+    background-image: url("img/bg3.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%; 
+    background-color: rgba(251, 173, 57,0.9);
+    background-blend-mode: multiply;
+}
+
+.bg2 {
     background: radial-gradient(50% 50% at 50% 50%, #FBBC05 0%, #FF8F3F 100%);
     background-image: url("img/bg.png");
     background-repeat: no-repeat;
     background-size: 100%; 
     background-color: rgba(251, 173, 57,0.9);
+    background-blend-mode: multiply;
 }
+
+.bg3 {
+    background: radial-gradient(50% 50% at 50% 50%, #FBBC05 0%, #FF8F3F 100%);
+    background-image: url("img/bg2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%; 
+    background-color: rgba(251, 173, 57,0.9);
+    background-blend-mode: multiply;
+}
+
+
 
 .container {
     margin: 50px 0 0 80px;
@@ -124,6 +148,7 @@ header .container .menu-main a:hover:after, header .container .menu-main .curren
     display: flex;
     flex-direction: column;
     transition: opacity 0.3s ease-in;
+
 }
 
 .slide-container .slide-row {
@@ -201,6 +226,7 @@ header .container .menu-main a:hover:after, header .container .menu-main .curren
     background-color: #ffffff;
     float: right;
     width: 180px;
+    height: 500px;
     text-align: right;
     left: 100px;
 }
